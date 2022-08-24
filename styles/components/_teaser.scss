@@ -1,0 +1,50 @@
+@import "../globalImports.scss";
+
+.teaser {
+  margin: $component-spacing;
+
+  .cmp-teaser {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__content {
+      @media (max-width: $media-phone-breakpoint) {
+        margin: 1.5rem 0;
+        order: 2;
+        text-align: center;
+      }
+
+      @media (min-width: $media-tablet-breakpoint) {
+        bottom: 30%;
+        position: absolute;
+        left: 20%;
+        z-index: 1;
+      }
+    }
+
+    &__title {
+      font-size: $u-heading-4;
+      @media (min-width: $media-tablet-breakpoint) {
+        font-size: $u-heading-1;
+      }
+    }
+
+    &__description {
+      font-size: $u-heading-5;
+      @media (min-width: $media-tablet-breakpoint) {
+        font-size: $u-heading-3;
+      }
+    }
+
+    &__image {
+      position: relative;
+      width: 100%;
+      height: 20rem;
+
+      @media (min-width: $media-tablet-breakpoint) {
+        height: 50rem;
+      }
+    }
+  }
+}

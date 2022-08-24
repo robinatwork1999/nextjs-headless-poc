@@ -1,0 +1,19 @@
+@import "../globalImports.scss";
+
+.button {
+  color: $color-shade-1;
+  font-size: $u-medium-text;
+  border: 1px solid $primary-brand-color;
+  border-radius: 3rem;
+  background-color: $primary-brand-color;
+  padding: 1.6rem 3rem;
+  margin: 1rem 0;
+
+  @media (min-width: $media-tablet-breakpoint) {
+    font-size: $u-large-text;
+  }
+
+  &:hover {
+    background-color: $color-accent-lighter;
+  }
+}

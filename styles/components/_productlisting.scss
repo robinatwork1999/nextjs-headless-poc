@@ -1,0 +1,42 @@
+@import "../globalImports.scss";
+
+.product-list {
+  &__card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style-type: none;
+    padding: 2rem;
+
+    @media (min-width: $media-tablet-breakpoint) {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+
+  &__card-items {
+    border: 3px solid $color-global-grey-5;
+    text-align: center;
+    padding: 2rem;
+
+    @media (min-width: $media-tablet-breakpoint) {
+      flex: 0 0 calc(33% - 1rem);
+    }
+  }
+
+  &__content {
+    margin-top: 1rem;
+  }
+
+  &__title {
+    cursor: pointer;
+    font-size: $u-heading-4;
+  }
+}

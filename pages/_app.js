@@ -6,13 +6,12 @@ import "../styles/globalLayout.scss";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { readFileSync } from "fs";
 import { join } from "path";
-import fs from "fs-extra";
+
 
 class InlineStylesHead extends Head {
   getCssLinks = ({ allFiles }) => {
     const { assetPrefix } = this.context;
     if (!allFiles || allFiles.length === 0) return null;
-    if (!fs.existsSync(join(process.cwd(), ".next", allFiles[0]))) return null;
   
     return allFiles
       .filter((file) => /\.css$/.test(file))

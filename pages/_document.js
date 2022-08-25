@@ -5,12 +5,7 @@ import { join } from "path";
 class InlineStylesHead extends Head {
   getCssLinks = ({ allFiles }) => {
     const { assetPrefix } = this.context;
-
     if (!allFiles || allFiles.length === 0) return null;
-    
-    for (let i= 0; i<allFiles.length; i++){
-     console.log(join(process.cwd(), ".next", allFiles[i]))
-    }
     
     return allFiles
       .filter((file) => /\.css$/.test(file))
@@ -20,7 +15,7 @@ class InlineStylesHead extends Head {
           nonce={this.props.nonce}
           data-href={`${assetPrefix}/_next/${file}`}
           dangerouslySetInnerHTML={{
-            __html: readFileSync(join(".next", file), "utf-8"),
+            __html: readFileSync(join(process.cwd(), ".next", file), "utf-8"),
           }}
         />
       ));

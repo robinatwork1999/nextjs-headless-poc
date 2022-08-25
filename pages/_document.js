@@ -27,7 +27,6 @@ export default class MainDocument extends Document {
   render() {
     return (
       <Html lang="en">
-       // <InlineStylesHead />
         <body>
           <Main />
         </body>

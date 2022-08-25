@@ -9,7 +9,7 @@ class InlineStylesHead extends Head {
     console.log(join(process.cwd(), ".next", allFiles[3]))
     
     return allFiles
-      .filter((file) => /\.js/.test(file))
+      .filter((file) => /\.css$/.test(file))
       .map((file) => (
         <style
           key={file}

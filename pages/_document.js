@@ -6,10 +6,9 @@ import fs from "fs-extra";
 class InlineStylesHead extends Head {
   getCssLinks = ({ allFiles }) => {
     const { assetPrefix } = this.context;
-    if (!allFiles || allFiles.length === 0) return null;
-    if (fs.existSync(join(process.cwd(), ".next", allFiles[0])) return null;
-    
-    
+    if (!allFiles || allFiles.length === 0) {return null};
+    if (fs.existSync(join(process.cwd(), ".next", allFiles[0])) {return null};
+  
     return allFiles
       .filter((file) => /\.css$/.test(file))
       .map((file) => (

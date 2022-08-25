@@ -9,8 +9,8 @@ const nextConfig = {
   useFileSystemPublicRoutes: true,
   reactStrictMode: true,
   swcMinify: true,
-    experimental: { 
-    nftTracing: true 
+  experimental: { 
+    optimizeCss: true 
   },
   webpack: ( config ) => {
     config.module.rules.push(

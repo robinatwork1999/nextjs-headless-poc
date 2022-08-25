@@ -5,6 +5,8 @@ import { join } from "path";
 class InlineStylesHead extends Head {
   getCssLinks = ({ allFiles }) => {
     const { assetPrefix } = this.context;
+    console.log(allFiles, "allFiles");
+    console.log(assetPrefix, "assetPrefix")
     if (!allFiles || allFiles.length === 0) return null;
     return allFiles
       .filter((file) => /\.css$/.test(file))

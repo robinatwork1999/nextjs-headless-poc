@@ -9,10 +9,10 @@ class InlineStylesHead extends Head {
     if (!allFiles || allFiles.length === 0) return null;
     console.log(fs.existsSync(join(process.cwd(), ".next")))
     fs.readdir(join(process.cwd(), ".next"), (err, files) => {
-  files.forEach(file => {
-    console.log(file);
-  });
-});
+    files.forEach(file => {
+    console.log("files",file);
+      });
+    });
     return allFiles
       .filter((file) => /\.css$/.test(file))
       .map((file) => (

@@ -8,7 +8,7 @@ class InlineStylesHead extends Head {
     const { assetPrefix } = this.context;
     if (!allFiles || allFiles.length === 0) return null;
     if (!fs.existsSync(join(process.cwd(), ".next", allFiles[0]))) return null;
-  
+
     return allFiles
       .filter((file) => /\.css$/.test(file))
       .map((file) => (
@@ -25,21 +25,17 @@ class InlineStylesHead extends Head {
 }
 
 export default class MainDocument extends Document {
-   toRenderCritical = () => {
-    if(fs.existsSync(join(process.cwd(), ".next/static"))) {
-      return (
-        <InlineStylesHead/>
-      ) 
+  toRenderCritical = () => {
+    if (fs.existsSync(join(process.cwd(), ".next/static"))) {
+      return <InlineStylesHead />;
     }
-    
-    return (
-      <Head></Head>
-    )
-  }
+
+    return <Head></Head>;
+  };
   render() {
     return (
       <Html lang="en">
-        { toRenderCritical() }
+        {this.toRenderCritical()}
         <body>
           <Main />
         </body>

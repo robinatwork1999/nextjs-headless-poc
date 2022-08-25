@@ -7,8 +7,11 @@ class InlineStylesHead extends Head {
   getCssLinks = ({ allFiles }) => {
     const { assetPrefix } = this.context;
     if (!allFiles || allFiles.length === 0) return null;
-    console.log(fs.existsSync(join(process.cwd(), ".next")))
-    console.log(join(process.cwd(), ".next"))
+    console.log(fs.existsSync(join(process.cwd(), ".next/static")))
+    console.log(join(process.cwd(), ".next/static"))
+    for (let i = 0; i < allFiles.length; i++ ) {
+      console.log(fs.existsSync(join(process.cwd(), ".next", allFiles[i])))
+    }
     return allFiles
       .filter((file) => /\.css$/.test(file))
       .map((file) => (

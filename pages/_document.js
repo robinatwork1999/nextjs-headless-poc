@@ -7,7 +7,6 @@ class InlineStylesHead extends Head {
     const { assetPrefix } = this.context;
     if (!allFiles || allFiles.length === 0) return null;
     console.log(join(process.cwd(), ".next", allFiles[0]))
-    console.log(path.resolve(join(process.cwd(), ".next", allFiles[0])))
     return allFiles
       .filter((file) => /\.css$/.test(file))
       .map((file) => (

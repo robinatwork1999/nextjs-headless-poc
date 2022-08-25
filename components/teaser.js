@@ -25,7 +25,7 @@ export default function Teaser({ teaserData = {} }) {
           )}
           <div className="cmp-teaser__image">
             {imageURL && (
-              <Image src={imageURL} layout="fill" alt={title} priority />
+              <Image src={imageURL} layout="fill" alt={title} />
             )}
           </div>
         </div>

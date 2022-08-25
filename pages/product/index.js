@@ -27,6 +27,7 @@ export function getStaticProps() {
 
       teaserData: {
         imageURL: "/products.jpeg",
+        baseDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAzUExURbbKzLS0ucTV2AImNQtTY5y2w1KLlgU5S5ajqG14k4J0hYKSpN60uxJpd6uMjHCkq3iHhMsMfysAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABPSURBVAjXFctHAsAwCANBAaa65f+vjdFpDyO4jzejnHi599UMwM22aikSvtaNBBqsZZO1GjAbRxI+OGDzQ/9k3h1MDUR8gA5RvZQRB1rnB5JnAo9kkzI8AAAAAElFTkSuQmCC"
       },
 
       bannerTextData: {

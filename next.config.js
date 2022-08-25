@@ -9,9 +9,6 @@ const nextConfig = {
   useFileSystemPublicRoutes: true,
   reactStrictMode: true,
   swcMinify: true,
-  serverRuntimeConfig: {
-    PROJECT_ROOT: __dirname
-},
   webpack: ( config ) => {
     config.module.rules.push(
     {

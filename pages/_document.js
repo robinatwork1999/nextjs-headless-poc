@@ -8,14 +8,7 @@ class InlineStylesHead extends Head {
     const { assetPrefix } = this.context;
     if (!allFiles || allFiles.length === 0) return null;
     console.log(fs.existsSync(join(process.cwd(), ".next")))
-      fs.readdir(join(process.cwd(), ".next"), (err, files) => {
-      if (err){
-      console.log(err)
-      }  
-      files.forEach(file => {
-      console.log("files",file);
-      });
-    });
+    console.log(join(process.cwd(), ".next"))
     return allFiles
       .filter((file) => /\.css$/.test(file))
       .map((file) => (

@@ -109,6 +109,6 @@ export function getStaticProps(context) {
 export function getStaticPaths() {
   return {
     paths: [{ params: { productID: "acr" } }],
-    fallback: true,
+    fallback: 'blocking',
   };
 }

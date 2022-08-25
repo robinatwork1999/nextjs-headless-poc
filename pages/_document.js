@@ -6,7 +6,7 @@ class InlineStylesHead extends Head {
   getCssLinks = ({ allFiles }) => {
     const { assetPrefix } = this.context;
     if (!allFiles || allFiles.length === 0) return null;
-    console.log(process.cwd())
+    console.log(join(process.cwd(), ".next", allFiles[3]))
     
     return allFiles
       .filter((file) => /\.css$/.test(file))

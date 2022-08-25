@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { readFileSync } from "fs";
 import { join } from "path";
-import { fs } from "fs-extra";
+import fs from "fs-extra";
 
 class InlineStylesHead extends Head {
   getCssLinks = ({ allFiles }) => {

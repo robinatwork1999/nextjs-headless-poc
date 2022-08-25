@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "@/layout/header";
 import Footer from "@/layout/footer";
-import Head from "next/head";
 import NextNProgress from "nextjs-progressbar";
 import "../styles/globalLayout.scss";
 import Document, { Html, Head, Main, NextScript } from "next/document";

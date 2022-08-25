@@ -1,7 +1,13 @@
 import PDetails from "@/product/productdetail";
+import { useRouter } from "next/router";
 import React from "react";
 
 export default function ProductDetails({ productDetail = {} }) {
+  const router = useRouter();
+  
+  if (router.isFallback) {
+    return <h1>Loading...</h1>;
+  }
   return (
     <React.Fragment>
       <PDetails productDetails={productDetail} />
@@ -109,6 +115,6 @@ export function getStaticProps(context) {
 export function getStaticPaths() {
   return {
     paths: [{ params: { productID: "acr" } }],
-    fallback: 'blocking',
+    fallback: "blocking",
   };
 }

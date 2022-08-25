@@ -19,7 +19,7 @@ export default function ProductDetails({ productDetail = {} }) {
 export function getStaticPaths() {
   return {
     paths: [{ params: { productID: "acr" } }],
-    fallback: true,
+    fallback: 'blocking',
   };
 }
 

@@ -15,6 +15,14 @@ export default function ProductDetails({ productDetail = {} }) {
   );
 }
 
+
+export function getStaticPaths() {
+  return {
+    paths: [{ params: { productID: "acr" } }],
+    fallback: true,
+  };
+}
+
 export function getStaticProps(context) {
   const { params } = context;
   const productDetailsJSON = [
@@ -109,12 +117,5 @@ export function getStaticProps(context) {
       productDetail: _productJSON[0],
     },
     revalidate: 10,
-  };
-}
-
-export function getStaticPaths() {
-  return {
-    paths: [{ params: { productID: "acr" } }],
-    fallback: false,
   };
 }

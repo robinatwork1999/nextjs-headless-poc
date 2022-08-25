@@ -10,9 +10,12 @@ export default function PDetails({ productDetails = {} }) {
     title = "",
     lngDescription = "",
     rating = "",
+    baseDataURL = ""
+    
   } = productDetails;
   const teaserData = {
     imageURL: bannerUrl,
+    baseDataURL: baseDataURL
   };
 
   const textHeaderData = {

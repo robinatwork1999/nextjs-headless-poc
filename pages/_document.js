@@ -1,8 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { readFileSync } from "fs";
 import { join } from "path";
-import getConfig from "next/config";
-const { serverRuntimeConfig } = getConfig();
 
 class InlineStylesHead extends Head {
   getCssLinks = ({ allFiles }) => {
@@ -17,10 +15,7 @@ class InlineStylesHead extends Head {
           nonce={this.props.nonce}
           data-href={`${assetPrefix}/_next/${file}`}
           dangerouslySetInnerHTML={{
-            __html: readFileSync(
-              join(serverRuntimeConfig.PROJECT_ROOT, ".next", file),
-              "utf-8"
-            ),
+            __html: readFileSync(join(process.cwd(), ".next/server/chunks", file), "utf-8"),
           }}
         />
       ));

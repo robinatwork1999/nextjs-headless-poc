@@ -26,7 +26,7 @@ class InlineStylesHead extends Head {
 
 export default class MainDocument extends Document {
   const toRenderCritical = () => {
-    if(fs.existsSync(join(process.cwd(), ".next/static") {
+    if(fs.existsSync(join(process.cwd(), ".next/static")) {
       return (
         <InlineStylesHead/>
       ) 

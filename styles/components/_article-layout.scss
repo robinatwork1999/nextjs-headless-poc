@@ -1,0 +1,26 @@
+@import "../globalImports.scss";
+
+.section-article {
+  background-color: $color-shade-1;
+  padding: 3rem 0;
+  margin: 5rem 0;
+
+  &__content {
+    width: 90%;
+    margin: auto;
+    @media (min-width: $media-tablet-breakpoint) {
+      width: 70%;
+    }
+  }
+
+  &__title {
+    font-size: $u-heading-5;
+    @media (min-width: $media-tablet-breakpoint) {
+      font-size: $u-heading-4;
+    }
+  }
+
+  &__description {
+    font-size: $u-heading-6;
+  }
+}

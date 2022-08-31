@@ -1,3 +1,8 @@
+/**
+ * Home Page
+ * @author Robin Varshney (robinvarshn@adobe.com)
+ */
+
 import ProductListing from "@/product/productlisting";
 import Seo from "components/seo";
 import Teaser from "components/teaser";
@@ -31,7 +36,8 @@ export function getStaticProps() {
         description: "Teaser Descripton For Hero Banner",
         imageURL: "/home-hero-banner.jpeg",
         buttonText: "CTA Label",
-        baseDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAhUExURfT3++fq8Nfb57W4x2JYVkIzL+DRyUtdd4N4eJqbotixm20bro4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA1SURBVAjXY2AAAgkgFkgSBZFpYDIxlYFBUKgxlYFRUTg4lUFQSblyCoisamEwNtKsAJPlLgDO1QmB5oLiTQAAAABJRU5ErkJggg==",
+        baseDataURL:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAhUExURfT3++fq8Nfb57W4x2JYVkIzL+DRyUtdd4N4eJqbotixm20bro4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA1SURBVAjXY2AAAgkgFkgSBZFpYDIxlYFBUKgxlYFRUTg4lUFQSblyCoisamEwNtKsAJPlLgDO1QmB5oLiTQAAAABJRU5ErkJggg==",
         variation: "teaser-variation-1",
       },
 
@@ -43,8 +49,9 @@ export function getStaticProps() {
       headerData: {
         logoURL: "/head-logo.svg",
         imageAlt: "alt",
-        baseDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAhUExURfT3++fq8Nfb57W4x2JYVkIzL+DRyUtdd4N4eJqbotixm20bro4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA1SURBVAjXY2AAAgkgFkgSBZFpYDIxlYFBUKgxlYFRUTg4lUFQSblyCoisamEwNtKsAJPlLgDO1QmB5oLiTQAAAABJRU5ErkJggg==",
-        navItems: ["Home", "Product", "Articles", "3D Tour"],
+        baseDataURL:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAhUExURfT3++fq8Nfb57W4x2JYVkIzL+DRyUtdd4N4eJqbotixm20bro4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA1SURBVAjXY2AAAgkgFkgSBZFpYDIxlYFBUKgxlYFRUTg4lUFQSblyCoisamEwNtKsAJPlLgDO1QmB5oLiTQAAAABJRU5ErkJggg==",
+        navItems: ["Home", "Products", "Articles"],
       },
 
       footerData: {

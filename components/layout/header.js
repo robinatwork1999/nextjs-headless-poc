@@ -1,3 +1,8 @@
+/**
+ * Presentation Component: Header
+ * @author Robin Varshney (robinvarshn@adobe.com)
+ */
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,8 +12,7 @@ export default function Header({ headerData = {} }) {
   const {
     logoURL = "/head-logo.svg",
     imageAlt = "alt",
-    logoFallBackURL = "",
-    navItems = ["Home", "Product", "Articles", "3D Tour"],
+    navItems = ["Home", "Product", "Articles"],
   } = headerData;
   return (
     <React.Fragment>

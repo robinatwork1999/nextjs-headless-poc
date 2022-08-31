@@ -15,9 +15,9 @@
   }
 
   &__image {
-    transition: transform 0.2s;
+    cursor: pointer;
     &:hover {
-      transform: scale(1.15);
+      opacity: 0.6;
     }
   }
 

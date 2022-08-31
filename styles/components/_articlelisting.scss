@@ -1,0 +1,56 @@
+@import "../globalImports.scss";
+
+.article-list {
+  margin-top: 4rem;
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-between;
+    margin: auto;
+    width: 95%;
+
+    @media (min-width: $media-tablet-breakpoint) {
+      flex-direction: row;
+      width: 70%;
+    }
+  }
+
+  &__card-items {
+    background: $primary-background;
+    display: flex;
+    gap: 1rem;
+    flex: 0 0 calc(31% - 1.5rem);
+  }
+
+  &__image {
+    cursor: pointer;
+    flex: 0 0 28%;
+    position: relative;
+    height: 13.5rem;
+    width: 10rem;
+    object-fit: contain;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__content {
+    align-self: center;
+    margin: auto;
+  }
+
+  &__title {
+    cursor: pointer;
+    font-size: $u-heading-6;
+  }
+
+  &__tag {
+    color: $color-global-grey-55;
+    font-size: $u-medium-text;
+  }
+}

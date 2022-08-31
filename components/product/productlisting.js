@@ -1,3 +1,8 @@
+/**
+ * Presentation Component: PL
+ * @author Robin Varshney (robinvarshn@adobe.com)
+ */
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -13,15 +18,17 @@ export default function ProductListing({ productListingData = [] }) {
               <React.Fragment key={index}>
                 <li className="product-list__card-items">
                   <div className="product-list__image">
-                    <Image
-                      src={element.imageUrl}
-                      alt={element.title}
-                      width="200"
-                      height="200"
-                    />
+                    <Link href={"/products/" + element.id} passHref>
+                      <Image
+                        src={element.imageUrl}
+                        alt={element.title}
+                        width="200"
+                        height="200"
+                      />
+                    </Link>
                   </div>
                   <div className="product-list__content">
-                    <Link href={"/product/" + element.id} passHref>
+                    <Link href={"/products/" + element.id} passHref>
                       <h3 className="product-list__title">{element.title}</h3>
                     </Link>
                     <span className="product-list__description">

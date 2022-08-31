@@ -1,3 +1,8 @@
+/**
+ * Presentation Component: PD
+ * @author Robin Varshney (robinvarshn@adobe.com)
+ */
+
 import Ratings from "components/ratings";
 import Seo from "components/seo";
 import Teaser from "components/teaser";
@@ -10,12 +15,12 @@ export default function PDetails({ productDetails = {} }) {
     title = "",
     lngDescription = "",
     rating = "",
-    baseDataURL = ""
-    
+    baseDataURL = "",
   } = productDetails;
+
   const teaserData = {
     imageURL: bannerUrl,
-    baseDataURL: baseDataURL
+    baseDataURL: baseDataURL,
   };
 
   const textHeaderData = {

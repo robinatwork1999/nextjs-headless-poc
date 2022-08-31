@@ -1,3 +1,8 @@
+/**
+ * Presentation Component: Footer
+ * @author Robin Varshney (robinvarshn@adobe.com)
+ */
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

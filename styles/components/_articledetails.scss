@@ -1,0 +1,52 @@
+@import "../globalImports.scss";
+
+.article-detail {
+  padding-top: 5rem;
+  margin: auto;
+  width: 90%;
+  @media (min-width: $media-tablet-breakpoint) {
+    width: 65%;
+  }
+
+  &__info {
+    margin: auto;
+    @media (min-width: $media-tablet-breakpoint) {
+      width: 70%;
+    }
+  }
+
+  &__tag {
+    color: $color-global-grey-55;
+    font-size: $u-heading-6;
+    font-weight: bold;
+  }
+
+  &__title {
+    font-size: $u-heading-2;
+  }
+
+  &__publisher-details {
+    display: flex;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  &__publisher-image {
+    position: relative;
+    height: 9rem;
+    width: 9rem;
+  }
+
+  &__publisher-raw {
+    border-radius: 50%;
+  }
+
+  &__publisher-profile {
+    align-self: center;
+  }
+
+  &__publisher-name,
+  &__publisher-date {
+    margin: 0;
+  }
+}

@@ -1,3 +1,8 @@
+/**
+ * Wrapper for each route
+ * @author Robin Varshney (robinvarshn@adobe.com)
+ */
+
 import React from "react";
 import Header from "@/layout/header";
 import Footer from "@/layout/footer";

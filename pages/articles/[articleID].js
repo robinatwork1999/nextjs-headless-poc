@@ -86,6 +86,7 @@ export function getStaticProps(context) {
 export function getStaticPaths() {
   return {
     paths: [
+      { params: { articleID: "acr" } },
       { params: { articleID: "cre" } },
       { params: { articleID: "met" } },
       { params: { articleID: "news" } },

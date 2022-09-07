@@ -10,7 +10,7 @@ import "../../styles/components/_articlelisting.scss";
 
 export default function ArticleListing({
   articleListingData = [],
-  AEM_HOST_URI,
+  AEM_HOST_URI = "",
 }) {
   return (
     <React.Fragment>

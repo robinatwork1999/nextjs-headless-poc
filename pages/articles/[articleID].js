@@ -14,7 +14,7 @@ export default function ArticleDetails({ articleDetail = {}, AEM_HOST_URI }) {
   if (router.isFallback) {
     return <h1>Loading...</h1>;
   }
-  
+
   return (
     <React.Fragment>
       <ADetails articleDetails={articleDetail} AEM_HOST_URI={AEM_HOST_URI} />

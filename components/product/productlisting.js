@@ -10,7 +10,7 @@ import "../../styles/components/_productlisting.scss";
 
 export default function ProductListing({
   productListingData = [],
-  AEM_HOST_URI,
+  AEM_HOST_URI = "",
 }) {
   return (
     <React.Fragment>

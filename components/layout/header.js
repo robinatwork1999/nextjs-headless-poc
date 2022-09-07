@@ -8,7 +8,7 @@ import Link from "next/link";
 import React from "react";
 import "../../styles/components/_header.scss";
 
-export default function Header({ headerData = {}, AEM_HOST_URI }) {
+export default function Header({ headerData = {}, AEM_HOST_URI = "" }) {
   const {
     logoURL = "./home",
     imageAlt = "alt",

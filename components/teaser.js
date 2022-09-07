@@ -8,7 +8,7 @@ import React from "react";
 import "../styles/components/_teaser.scss";
 import "../styles/components/_button.scss";
 
-export default function Teaser({ teaserData = {}, AEM_HOST_URI }) {
+export default function Teaser({ teaserData = {}, AEM_HOST_URI = "" }) {
   const {
     title = "",
     description = "",

@@ -10,7 +10,7 @@ import Image from "next/image";
 import React from "react";
 import "../../styles/components/_articledetails.scss";
 
-export default function ADetails({ articleDetails = {}, AEM_HOST_URI = '' }) {
+export default function ADetails({ articleDetails = {}, AEM_HOST_URI = "" }) {
   const {
     imageUrl = "",
     title = "",

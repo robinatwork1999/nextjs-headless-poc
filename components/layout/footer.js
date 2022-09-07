@@ -8,7 +8,7 @@ import Link from "next/link";
 import React from "react";
 import "../../styles/components/_footer.scss";
 
-export default function Footer({ footerData = {} }) {
+export default function Footer({ footerData = {}, AEM_HOST_URI }) {
   const {
     copyRightContent = "Copyright © 2022 Adobe. All rights reserved.",
     copyRightLogo = "/head-logo.svg",
@@ -21,7 +21,9 @@ export default function Footer({ footerData = {} }) {
         <div className="footer">
           <div className="footer__copyright">
             <Image
-              src={copyRightLogo}
+              src={`${AEM_HOST_URI.replace("author", "publish")}${
+                copyRightLogo._path
+              }`}
               alt={copyRightContent}
               height="20"
               width="20"
@@ -30,7 +32,9 @@ export default function Footer({ footerData = {} }) {
           </div>
           <div className="footer__brand-logo">
             <Image
-              src={brandLogo}
+              src={`${AEM_HOST_URI.replace("author", "publish")}${
+                brandLogo._path
+              }`}
               alt={copyRightContent}
               width="200"
               height="100"

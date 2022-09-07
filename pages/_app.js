@@ -11,18 +11,18 @@ import NextNProgress from "nextjs-progressbar";
 import "../styles/globalLayout.scss";
 
 function MyApp({ Component, pageProps }) {
-  const { headerData = {}, footerData = {} } = pageProps;
+  const { headerData = {}, footerData = {}, AEM_HOST_URI } = pageProps;
   return (
     <React.Fragment>
       <Head>
         <meta name="description" content="Put your description here." />
       </Head>
-      <Header headerData={headerData} />
+      <Header headerData={headerData} AEM_HOST_URI={AEM_HOST_URI} />
       <main className="main-content">
         <NextNProgress color="#103be6" />
         <Component {...pageProps} />
       </main>
-      <Footer footerData={footerData} />
+      <Footer footerData={footerData} AEM_HOST_URI={AEM_HOST_URI} />
     </React.Fragment>
   );
 }

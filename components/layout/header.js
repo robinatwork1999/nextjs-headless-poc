@@ -8,9 +8,9 @@ import Link from "next/link";
 import React from "react";
 import "../../styles/components/_header.scss";
 
-export default function Header({ headerData = {} }) {
+export default function Header({ headerData = {}, AEM_HOST_URI }) {
   const {
-    logoURL = "/head-logo.svg",
+    logoURL = "./home",
     imageAlt = "alt",
     navItems = ["Home", "Product", "Articles"],
   } = headerData;
@@ -22,7 +22,9 @@ export default function Header({ headerData = {} }) {
             <a className="header__logo">
               <Image
                 className="header__image"
-                src={logoURL}
+                src={`${AEM_HOST_URI.replace("author", "publish")}${
+                  logoURL._path
+                }`}
                 layout="fill"
                 alt={imageAlt}
               />

@@ -8,7 +8,10 @@ import Link from "next/link";
 import React from "react";
 import "../../styles/components/_articlelisting.scss";
 
-export default function ArticleListing({ articleListingData = [] }) {
+export default function ArticleListing({
+  articleListingData = [],
+  AEM_HOST_URI,
+}) {
   return (
     <React.Fragment>
       <div className="article-list">
@@ -21,7 +24,9 @@ export default function ArticleListing({ articleListingData = [] }) {
                     <Link href={"/articles/" + element.id}>
                       <a>
                         <Image
-                          src={element.imageUrl}
+                          src={`${AEM_HOST_URI.replace("author", "publish")}${
+                            element.imageUrl._path
+                          }`}
                           alt={element.title}
                           layout="fill"
                         />

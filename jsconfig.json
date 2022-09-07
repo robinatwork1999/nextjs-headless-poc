@@ -1,10 +1,10 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "@/layout/*": ["components/layout/*"],
-            "@/product/*": ["components/product/*"],
-            "@/article/*": ["components/article/*"]
-        }
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/layout/*": ["components/layout/*"],
+      "@/product/*": ["components/product/*"],
+      "@/article/*": ["components/article/*"]
     }
+  }
 }

@@ -8,7 +8,10 @@ import Link from "next/link";
 import React from "react";
 import "../../styles/components/_productlisting.scss";
 
-export default function ProductListing({ productListingData = [] }) {
+export default function ProductListing({
+  productListingData = [],
+  AEM_HOST_URI,
+}) {
   return (
     <React.Fragment>
       <div className="product-list">
@@ -18,13 +21,17 @@ export default function ProductListing({ productListingData = [] }) {
               <React.Fragment key={index}>
                 <li className="product-list__card-items">
                   <div className="product-list__image">
-                    <Link href={"/products/" + element.id} passHref>
-                      <Image
-                        src={element.imageUrl}
-                        alt={element.title}
-                        width="200"
-                        height="200"
-                      />
+                    <Link href={"/products/" + element.id}>
+                      <a>
+                        <Image
+                          src={`${AEM_HOST_URI.replace("author", "publish")}${
+                            element.imageUrl._path
+                          }`}
+                          alt={element.title}
+                          width="200"
+                          height="200"
+                        />
+                      </a>
                     </Link>
                   </div>
                   <div className="product-list__content">

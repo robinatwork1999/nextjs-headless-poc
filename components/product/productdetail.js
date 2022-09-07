@@ -9,7 +9,7 @@ import Teaser from "components/teaser";
 import Text from "components/text";
 import React from "react";
 
-export default function PDetails({ productDetails = {} }) {
+export default function PDetails({ productDetails = {}, AEM_HOST_URI }) {
   const {
     bannerUrl = "",
     title = "",
@@ -36,7 +36,7 @@ export default function PDetails({ productDetails = {} }) {
   return (
     <React.Fragment>
       <Seo pageTitle={title} />
-      <Teaser teaserData={teaserData} />
+      <Teaser teaserData={teaserData} AEM_HOST_URI={AEM_HOST_URI} />
       <Text text={textHeaderData} />
       <Text text={textDescriptionData} />
       <Ratings rating={rating} />

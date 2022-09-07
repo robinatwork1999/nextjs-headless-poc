@@ -10,7 +10,7 @@ import Image from "next/image";
 import React from "react";
 import "../../styles/components/_articledetails.scss";
 
-export default function ADetails({ articleDetails = {} }) {
+export default function ADetails({ articleDetails = {}, AEM_HOST_URI = '' }) {
   const {
     imageUrl = "",
     title = "",
@@ -43,7 +43,9 @@ export default function ADetails({ articleDetails = {} }) {
             <div className="article-detail__publisher-image">
               <Image
                 className="article-detail__publisher-raw"
-                src={publisherImage}
+                src={`${AEM_HOST_URI.replace("author", "publish")}${
+                  publisherImage._path
+                }`}
                 layout="fill"
               />
             </div>
@@ -54,7 +56,7 @@ export default function ADetails({ articleDetails = {} }) {
           </div>
         </div>
         <div className="article-detail__content">
-          <Teaser teaserData={teaserData} />
+          <Teaser teaserData={teaserData} AEM_HOST_URI={AEM_HOST_URI} />
           <Text text={textDescriptionData} />
         </div>
       </div>

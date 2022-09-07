@@ -4,57 +4,59 @@
  */
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const globImporter = require('node-sass-glob-importer');
+const globImporter = require("node-sass-glob-importer");
 const nextConfig = {
   useFileSystemPublicRoutes: true,
+  images: {
+    domains: ["publish-p12756-e735552.adobeaemcloud.com", "cdn.pixabay.com"],
+  },
   reactStrictMode: true,
   swcMinify: true,
-  webpack: ( config ) => {
-    config.module.rules.push(
-    {
+  webpack: (config) => {
+    config.module.rules.push({
       test: /\.scss$/,
       use: [
-          MiniCssExtractPlugin.loader,
-          {
-              loader: 'css-loader',
-              options: {
-                  url: false,
-              },
+        MiniCssExtractPlugin.loader,
+        {
+          loader: "css-loader",
+          options: {
+            url: false,
           },
-          {
-              loader: 'postcss-loader',
-              options: {
-                  postcssOptions: {
-                      plugins: [['autoprefixer']],
-                  },
-              },
+        },
+        {
+          loader: "postcss-loader",
+          options: {
+            postcssOptions: {
+              plugins: [["autoprefixer"]],
+            },
           },
-          {
-              loader: 'sass-loader',
-              options: {
-                  sourceMap: false,
-                  sassOptions: {
-                      importer: globImporter(),
-                  },
-              },
+        },
+        {
+          loader: "sass-loader",
+          options: {
+            sourceMap: false,
+            sassOptions: {
+              importer: globImporter(),
+            },
           },
-          {
-              loader: 'webpack-import-glob-loader',
-              options: {
-                  url: false,
-              },
+        },
+        {
+          loader: "webpack-import-glob-loader",
+          options: {
+            url: false,
           },
+        },
       ],
-    })
+    });
     config.plugins.push(
       new MiniCssExtractPlugin({
-        filename: 'static/css/[contenthash].css',
-        chunkFilename: 'static/css/[contenthash].css',
+        filename: "static/css/[contenthash].css",
+        chunkFilename: "static/css/[contenthash].css",
         ignoreOrder: true,
       })
-    )
-    return config
+    );
+    return config;
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

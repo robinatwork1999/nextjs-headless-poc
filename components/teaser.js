@@ -8,19 +8,18 @@ import React from "react";
 import "../styles/components/_teaser.scss";
 import "../styles/components/_button.scss";
 
-export default function Teaser({ teaserData = {} }) {
+export default function Teaser({ teaserData = {}, AEM_HOST_URI }) {
   const {
     title = "",
     description = "",
-    imageURL = "",
+    imageURL = {},
     buttonText = null,
     buttonVariation = "",
     variation = null,
     baseDataURL = "",
-    newsTag = null,
+    PublishedData = null,
     articleType = null,
   } = teaserData;
-
   return (
     <React.Fragment>
       <div className={`teaser ${variation}`}>
@@ -37,13 +36,17 @@ export default function Teaser({ teaserData = {} }) {
                   {buttonText}
                 </button>
               )}
-              {newsTag && <p className="cmp-teaser__news-tag">{newsTag}</p>}
+              {PublishedData && (
+                <p className="cmp-teaser__news-tag">{PublishedData}</p>
+              )}
             </div>
           )}
           <div className="cmp-teaser__image">
             {imageURL && (
               <Image
-                src={imageURL}
+                src={`${AEM_HOST_URI.replace("author", "publish")}${
+                  imageURL._path
+                }`}
                 layout="fill"
                 alt={title}
                 placeholder="blur"

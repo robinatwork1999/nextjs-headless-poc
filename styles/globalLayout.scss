@@ -1,33 +1,33 @@
-@import "./globalImports.scss";
+@import './globalImports.scss';
 
 *,
 *::before,
 *::after {
-  box-sizing: $primary-box-sizing;
+    box-sizing: $primary-box-sizing;
 }
 
 html {
-  font-size: $primary-page-font-size;
-  scroll-behavior: smooth;
+    font-size: $primary-page-font-size;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: $primary-background;
-  color: $color-text;
-  font-family: $font-family;
-  font-size: $primary-body-font-size;
-  line-height: $primary-body-line-height;
-  margin: $primary-body-margin;
+    background: $color-global-grey-1;
+    color: $color-text;
+    font-family: $font-family;
+    font-size: $primary-body-font-size;
+    line-height: $primary-body-line-height;
+    margin: $primary-body-margin;
 }
 
 a {
-  color: $link-color;
+    color: $link-color;
 }
 
 p {
-  font-weight: $primary-paragraph-font-weight;
-  line-height: $primary-paragraph-line-height;
-  margin-block: $primary-paragraph-margin-block;
+    font-weight: $primary-paragraph-font-weight;
+    line-height: $primary-paragraph-line-height;
+    margin-block: $primary-paragraph-margin-block;
 }
 
 h1,
@@ -36,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-block: $primary-heading-margin-block;
+    margin-block: $primary-heading-margin-block;
 }
 
 button,
@@ -44,23 +44,23 @@ input,
 optgroup,
 select,
 textarea {
-  font: $primary-component-font;
+    font: $primary-component-font;
 }
 
 img {
-  height: $primary-image-height;
-  max-width: $primary-image-max-width;
-  vertical-align: $primary-image-vertical-align;
+    height: $primary-image-height;
+    max-width: $primary-image-max-width;
+    vertical-align: $primary-image-vertical-align;
 }
 
 button {
-  cursor: $primary-cursor;
+    cursor: $primary-cursor;
 }
 
 .main-content {
-  margin-top: 7rem;
+    margin-top: 10rem;
 
-  @media (min-width: $media-tablet-breakpoint) {
-    margin-top: 12rem;
-  }
+    @media (min-width: $media-phone-breakpoint) {
+        margin-top: 18rem;
+    }
 }

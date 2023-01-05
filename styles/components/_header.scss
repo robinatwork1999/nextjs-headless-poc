@@ -1,79 +1,64 @@
-@import "../globalImports.scss";
+@import '../constants/configs';
 
 .header {
-  align-items: center;
-  background: $color-global-white;
-  border-bottom: 0.3rem solid $color-global-grey-5;
-  display: flex;
-  padding: 0.5rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 5;
-
-  @media (min-width: $media-tablet-breakpoint) {
-    padding: 2rem 5rem;
-  }
-
-  &__logo {
-    cursor: pointer;
-    position: relative;
-    height: 5rem;
-    object-fit: cover;
-    width: 100%;
-
-    @media (min-width: $media-tablet-breakpoint) {
-      height: 7.5rem;
-    }
-  }
-
-  &__nav {
-    flex: 0 0 80%;
-
-    @media (min-width: $media-tablet-breakpoint) {
-      flex: 0 0 95%;
-    }
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    list-style-type: none;
-
-    @media (min-width: $media-tablet-breakpoint) {
-      gap: 3rem;
-      justify-content: center;
-    }
-  }
-
-  &__links {
-    font-weight: 550;
-    text-decoration: none;
-    font-size: $u-heading-6;
-
-    @media (min-width: $media-tablet-breakpoint) {
-      font-size: $u-heading-5;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      margin: auto;
-      height: 3px;
-      width: 0px;
-      background: transparent;
-      transition: width 0.35s ease, background-color 0.5s ease;
-    }
-
-    &:hover {
-      color: $color-accent-lighter;
-      transition: border 3s ease;
-
-      &::after {
+    &__container {
+        background-color: $color-global-white;
+        position: fixed;
+        top: 0;
         width: 100%;
-        background: $primary-brand-color;
-      }
+        z-index: 10;
     }
-  }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    &__item {
+        display: flex;
+        flex: 0 0 100%;
+        flex-direction: row;
+        position: relative;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &::before,
+        &::after {
+            border-bottom: 0.3rem solid $color-global-black;
+            content: '';
+            flex: 1 1;
+            margin: auto;
+        }
+    }
+
+    &__logo {
+        cursor: pointer;
+        height: 8rem;
+        object-fit: cover;
+        position: relative;
+        width: 8rem;
+
+        @media (min-width: $media-phone-breakpoint) {
+            height: 15rem;
+            width: 15rem;
+        }
+    }
+
+    &__image {
+        animation: rotation 15s infinite linear;
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(359deg);
+            }
+        }
+    }
 }

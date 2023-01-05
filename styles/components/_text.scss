@@ -1,28 +1,17 @@
-@import "../globalImports.scss";
+@import '../constants/configs';
 
 .text {
-  font-size: $u-heading-6;
-  padding: $component-spacing;
-
-  &--variation1 {
-    font-size: $u-heading-4;
+    margin: 2rem;
     text-align: center;
-    font-weight: 550;
-    @media (min-width: $media-tablet-breakpoint) {
-      font-size: $u-heading-2;
-    }
-  }
 
-  &--variation2 {
-    background-color: $color-shade-1;
-    font-size: $u-medium-text;
-    font-weight: 500;
-    padding: 1.5rem;
-    margin: auto;
-    width: 95%;
-    @media (min-width: $media-tablet-breakpoint) {
-      font-size: $u-large-text;
-      width: 75%;
+    &__info {
+        font-size: $u-heading-5;
+        font-weight: 800;
+        padding: 1rem;
+        text-align: center;
+
+        @media (min-width: $media-phone-breakpoint) {
+            font-size: $u-heading-2;
+        }
     }
-  }
 }

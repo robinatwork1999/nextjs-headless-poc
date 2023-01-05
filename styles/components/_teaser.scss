@@ -1,100 +1,35 @@
-@import "../globalImports.scss";
+@import '../constants/configs';
 
 .teaser {
-  margin: $component-spacing;
-
-  .cmp-teaser {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
-    &__content {
-      @media (max-width: $media-phone-breakpoint) {
-        margin: 1.5rem 0;
-        order: 2;
-        text-align: center;
-      }
-
-      @media (min-width: $media-tablet-breakpoint) {
-        bottom: 30%;
-        position: absolute;
-        left: 20%;
-        z-index: 1;
-      }
-    }
-
-    &__title {
-      font-size: $u-heading-4;
-      @media (min-width: $media-tablet-breakpoint) {
-        font-size: $u-heading-1;
-      }
-    }
-
-    &__description {
-      font-size: $u-heading-5;
-      @media (min-width: $media-tablet-breakpoint) {
-        font-size: $u-heading-3;
-      }
-    }
-
-    &__image {
-      position: relative;
-      width: 100%;
-      height: 20rem;
-
-      @media (min-width: $media-tablet-breakpoint) {
-        height: 50rem;
-      }
-    }
-
-    &__article-type {
-      font-weight: bold;
-      font-size: $u-heading-6;
-    }
-
-    &__news-tag {
-      font-weight: bold;
-      @media (min-width: $media-tablet-breakpoint) {
-        font-size: $u-heading-5;
-        margin-top: 3rem;
-      }
-    }
-  }
-
-  &--variation-3 {
     .cmp-teaser {
-      @media (min-width: $media-tablet-breakpoint) {
-        flex-direction: row;
-        justify-content: center;
-        gap: 4rem;
-        padding-top: 5rem;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 5rem;
 
         &__image {
-          width: 40%;
-          height: 35rem;
+            height: 20rem;
+            position: relative;
+            width: 98%;
+
+            @media (min-width: $media-phone-breakpoint) {
+                height: 65rem;
+                width: 65%;
+            }
         }
 
-        &__content {
-          position: unset;
-          order: 2;
-          align-self: center;
-          flex: 0 0 25%;
+        &__divider {
+            &::before {
+                border: 0 solid transparent;
+                border-right-color: $color-global-white;
+                border-right-width: 100vw;
+                border-top-color: transparent;
+                border-top-width: 5vw;
+                bottom: 0;
+                content: '';
+                left: 0;
+                position: absolute;
+            }
         }
-      }
-
-      &__title {
-        font-size: $u-heading-5;
-        @media (min-width: $media-tablet-breakpoint) {
-          font-size: $u-heading-3;
-        }
-      }
-
-      &__description {
-        font-size: $u-heading-6;
-        @media (min-width: $media-tablet-breakpoint) {
-          font-size: $u-heading-5;
-        }
-      }
     }
-  }
 }

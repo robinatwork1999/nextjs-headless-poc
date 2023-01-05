@@ -1,62 +1,69 @@
-@import "../globalImports.scss";
+@import '../globalImports.scss';
 
 .footer {
-  align-items: center;
-  border-top: 0.3rem solid $color-global-grey-5;
-  display: flex;
-  flex-direction: column;
-  padding: 1.75rem;
-  margin-top: 7.5rem;
-
-  @media (min-width: $media-tablet-breakpoint) {
-    flex-direction: row;
-    padding: 2rem 5rem;
-    justify-content: space-between;
-  }
-
-  &__links {
-    margin-bottom: 1rem;
-  }
-
-  &__copyright {
     align-items: center;
-    display: flex;
-    gap: 1rem;
-    font-weight: 550;
-
-    @media (max-width: $media-phone-breakpoint) {
-      order: 3;
-    }
-  }
-
-  &__list {
+    background-color: $color-global-grey-5;
+    border-top: 0.3rem solid $color-global-black;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
+    margin-top: 7.5rem;
+    padding: 1.75rem;
 
-    @media (min-width: $media-tablet-breakpoint) {
-      flex-direction: row;
+    @media (min-width: $media-phone-breakpoint) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 5rem;
     }
-  }
 
-  &__list-links {
-    font-size: $u-large-text;
-    font-weight: 550;
-    text-align: center;
-
-    &:hover {
-      color: $color-accent-lighter;
+    &__links {
+        margin-bottom: 1rem;
     }
-  }
 
-  &__text {
-    font-size: $u-medium-text;
+    &__copyright {
+        align-items: center;
+        display: flex;
+        font-weight: 550;
+        gap: 1rem;
 
-    @media (min-width: $media-tablet-breakpoint) {
-      font-size: $u-heading-6;
+        @media (max-width: $media-phone-breakpoint) {
+            order: 3;
+        }
     }
-  }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+
+        @media (min-width: $media-phone-breakpoint) {
+            flex-direction: row;
+        }
+    }
+
+    &__list-links {
+        font-size: $u-large-text;
+        font-weight: 550;
+        text-align: center;
+
+        &:hover {
+            color: $color-accent-lighter;
+        }
+    }
+
+    &__brand-logo {
+        height: 10rem;
+        position: relative;
+        width: 10rem;
+    }
+
+    &__text {
+        font-size: $u-medium-text;
+
+        @media (min-width: $media-phone-breakpoint) {
+            font-size: $u-heading-6;
+        }
+    }
 }
